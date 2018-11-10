@@ -7,8 +7,8 @@ export default class App extends Component {
       email: '',
       password: '',
     };
-  
-  
+
+
   onLogin() {
     const { email, password } = this.state;
 
@@ -36,15 +36,15 @@ export default class App extends Component {
           placeholderTextColor = 'white'
           style={styles.input}
         />
-        
-     
+
+
         <TouchableOpacity
           style={styles.button}
           onPress={this.onLogin.bind(this)}
        >
          <Text style={styles.buttonText}> Sign Up / Login </Text>
        </TouchableOpacity>
-        
+
       </View>
     );
   }
@@ -58,7 +58,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'salmon',
   },
   titleText:{
-    fontFamily: 'Baskerville',
+    fontFamily: 'Roboto',
     fontSize: 50,
     alignItems: 'center',
     justifyContent: 'center',
@@ -75,14 +75,14 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   buttonText:{
-    fontFamily: 'Baskerville',
+    fontFamily: 'Roboto',
     fontSize: 20,
     alignItems: 'center',
     justifyContent: 'center',
   },
   input: {
     width: 200,
-    fontFamily: 'Baskerville',
+    fontFamily: 'Roboto',
     fontSize: 20,
     height: 44,
     padding: 10,
