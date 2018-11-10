@@ -47,16 +47,13 @@ export default class App extends Component {
          <Text style={styles.buttonText}> Sign Up / Login </Text>
        </TouchableOpacity>
 
-<<<<<<< HEAD
-=======
        <TouchableOpacity
           style={styles.button2}
           onPress={this.onLogin.bind(this)}
        >
          <Text style={styles.buttonText}> Forgot Password </Text>
        </TouchableOpacity>
-        
->>>>>>> 4e5f759ce0d41593404387f701ec58fd12027605
+
       </View>
       </KeyboardAvoidingView>
     );
@@ -74,7 +71,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
   },
   textBox: {
-    fontFamily: 'Baskerville',
+    fontFamily: 'Roboto',
     fontSize: 30,
     alignItems: 'center',
     justifyContent: 'center',
