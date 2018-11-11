@@ -21,17 +21,17 @@ export default class App extends Component {
         password: '',
       }
     }
-    
+
     static navigationOptions = {
     headerLeft: null,
     title: 'SWAT',
     };
-  
+
   onLogin() {
     const { email, password } = this.state;
 
     if(this.state.email === '' || this.state.password === ''){
-      alert('empty');
+      alert('Empty!');
     }
     else {
       const reg = /^\w+([\.-]?\w+)*@ucsd.edu$/;
@@ -70,7 +70,7 @@ export default class App extends Component {
           placeholderTextColor = 'gray'
           style={styles.input}
         />
-      
+
         <TouchableOpacity
           style={styles.button1}
           onPress={this.onLogin.bind(this) }
@@ -83,7 +83,7 @@ export default class App extends Component {
           onPress={() =>
               {this.props.navigation.navigate('NewUser')}}
        >
-         <Text style={styles.buttonText}> New user? </Text>
+         <Text style={styles.buttonText}> New User? </Text>
        </TouchableOpacity>
 
        <TouchableOpacity
@@ -92,7 +92,7 @@ export default class App extends Component {
               {this.props.navigation.navigate('Password')}}
        >
 
-         <Text style={styles.buttonText}> Forgot Password </Text>
+         <Text style={styles.buttonText}> Forgot Password? </Text>
        </TouchableOpacity>
 
       </View>
