@@ -29,4 +29,3 @@ firebase.initializeApp(config);
 
 export default firebase;
 export default App;
-
