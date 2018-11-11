@@ -47,22 +47,23 @@ export default class App extends Component {
         <TouchableOpacity
           style={styles.button1}
           onPress={() =>
-              {this.props.navigation.navigate('Login');}
-            }
+              {this.props.navigation.navigate('Login')}}
        >
          <Text style={styles.buttonText}>  Login </Text>
        </TouchableOpacity>
 
        <TouchableOpacity
-          style={styles.button2}
-          onPress={this.onLogin.bind(this) }
+          style={styles.button1}
+          onPress={() =>
+              {this.props.navigation.navigate('NewUser')}}
        >
          <Text style={styles.buttonText}> New user? </Text>
        </TouchableOpacity>
 
        <TouchableOpacity
-          style={styles.button2}
-          onPress={this.onLogin.bind(this)}
+          style={styles.button1}
+          onPress={() =>
+              {this.props.navigation.navigate('Password')}}
        >
          <Text style={styles.buttonText}> Forgot Password </Text>
        </TouchableOpacity>
@@ -98,7 +99,7 @@ const styles = StyleSheet.create({
   button1: {
     alignItems: 'center',
     backgroundColor: 'powderblue',
-    width: 200,
+    width: 300,
     height: 44,
     padding: 10,
     borderWidth: 1,
@@ -124,13 +125,13 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   input: {
-    width: 200,
+    width: 300,
     fontFamily: 'Baskerville',
     fontSize: 20,
     height: 44,
     padding: 10,
     borderWidth: 1,
-    borderColor: 'white',
+    borderColor: 'black',
     marginVertical: 10,
   },
 });

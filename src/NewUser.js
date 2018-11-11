@@ -4,7 +4,7 @@ import { createStackNavigator } from 'react-navigation';
 
 import styles from '../src/Styles'
 
-export default class Login extends React.Component {
+export default class NewUser extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -21,7 +21,7 @@ export default class Login extends React.Component {
 	render(){
 		return(
 			<View style={styles.titlePnl}>
-			<Text style={styles.title}>What is your email</Text>
+			<Text style={styles.title}>New user</Text>
 			</View>
 		)
 	}
