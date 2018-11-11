@@ -85,13 +85,13 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
   },
   textBox: {
-    fontFamily: 'Baskerville',
+    fontFamily: 'normal',
     fontSize: 30,
     alignItems: 'center',
     justifyContent: 'center',
   },
   titleText:{
-    fontFamily: 'Baskerville',
+    fontFamily: 'normal',
     fontSize: 50,
     alignItems: 'center',
     justifyContent: 'center',
@@ -119,14 +119,14 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   buttonText:{
-    fontFamily: 'Baskerville',
+    fontFamily: 'normal',
     fontSize: 20,
     alignItems: 'center',
     justifyContent: 'center',
   },
   input: {
     width: 300,
-    fontFamily: 'Baskerville',
+    fontFamily: 'normal',
     fontSize: 20,
     height: 44,
     padding: 10,

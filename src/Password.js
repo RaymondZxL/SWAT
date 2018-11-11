@@ -1,4 +1,4 @@
-import React from 'react'; 
+import React from 'react';
 import { StyleSheet, Text, View, Image } from 'react-native';
 import { createStackNavigator } from 'react-navigation';
 
@@ -21,7 +21,7 @@ export default class Password extends React.Component {
 	render(){
 		return(
 			<View style={styles.titlePnl}>
-			<Text style={styles.title}>Password</Text>
+			<Text style={styles.title}>Password Reset</Text>
 			</View>
 		)
 	}
