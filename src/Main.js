@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Alert, Button, Text, TouchableOpacity, TextInput, View, StyleSheet, Image, KeyboardAvoidingView } from 'react-native';
 import { createStackNavigator } from 'react-navigation';
-
+import firebase from 'firebase'
 import styles from './Styles'
 
 export default class App extends Component {

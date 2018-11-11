@@ -3,6 +3,7 @@ import { Alert, Button, Text, TouchableOpacity, TextInput, View, StyleSheet, Ima
 import { createStackNavigator } from 'react-navigation';
 
 import styles from '../src/Styles'
+import firebase from '../src/firebase'
 
 export default class NewUser extends React.Component {
 	constructor(props) {
@@ -14,10 +15,25 @@ export default class NewUser extends React.Component {
 			password: '',
 			re_password: '',
 		}
+		this.firebaseRef = firebase.database().ref("User");
+	}
+
+	PushToFireBase(event){
+		event.preventDefault();
+		this.firebaseRef.child(name).set({
+			email: this.state.email, 
+			name: this.state.name, 
+			birthday: this.state.birthday, 
+			password: this.state.password});
+		this.setState({
+			email: '',
+			name: '',
+			birthday: '',
+			password: '',
+			re_password: ''});
 	}
 
 	static navigationOptions = {
-	    headerLeft: null,
 	    title: 'Creating Account',
     };
 
@@ -32,11 +48,11 @@ export default class NewUser extends React.Component {
     	}else if (reg.test(this.state.email) === false){
         	alert('ucsd email !!!');
       	}else{
-      		user.email = this.state.email;
+      		{/*user.email = this.state.email;
       		user.name = this.state.name;
       		user.birthday = this.state.birthday;
-      		user.password = this.state.password;
-
+      		user.password = this.state.password;*/}
+      		this.PushToFireBase.bind(this);
     		this.props.navigation.navigate('Login');
     	}
 	}
@@ -62,6 +78,7 @@ export default class NewUser extends React.Component {
 		        />
 		        <Text style={styles.textBox}>Name:</Text>
 	       		<TextInput
+	       		  maxLength={40}
 		          value={this.state.name}
 		          keyboardType = 'default'
 		          onChangeText={(name) => this.setState({ name })}
@@ -71,6 +88,7 @@ export default class NewUser extends React.Component {
 		        />
 		        <Text style={styles.textBox }>Birthday:</Text>
 	       		<TextInput
+	       		  maxLength={40}
 		          value={this.state.birthday}
 		          keyboardType = 'default'
 		          onChangeText={(birthday) => this.setState({ birthday })}
@@ -80,6 +98,7 @@ export default class NewUser extends React.Component {
 		        />
 		        <Text style={styles.textBox}>Password:</Text>
 	       		<TextInput
+	       		  maxLength={40}
 	       		  secureTextEntry={true}
 		          value={this.state.password}
 		          keyboardType = 'default'
@@ -90,6 +109,7 @@ export default class NewUser extends React.Component {
 		        />
 		        <Text style={styles.textBox}>Re-enter Password:</Text>
 	       		<TextInput
+	       		  maxLength={40}
 	       		  secureTextEntry={true}
 		          value={this.state.re_password}
 		          keyboardType = 'default'
