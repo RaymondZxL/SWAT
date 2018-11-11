@@ -31,7 +31,7 @@ export default class App extends Component {
     const { email, password } = this.state;
 
     if(this.state.email === '' || this.state.password === ''){
-      alert('empty');
+      alert('Empty!');
     }
     else {
       const reg = /^\w+([\.-]?\w+)*@ucsd.edu$/;
@@ -83,7 +83,7 @@ export default class App extends Component {
           onPress={() =>
               {this.props.navigation.navigate('NewUser')}}
        >
-         <Text style={styles.buttonText}> New user? </Text>
+         <Text style={styles.buttonText}> New User? </Text>
        </TouchableOpacity>
 
        <TouchableOpacity
@@ -92,7 +92,7 @@ export default class App extends Component {
               {this.props.navigation.navigate('Password')}}
        >
 
-         <Text style={styles.buttonText}> Forgot Password </Text>
+         <Text style={styles.buttonText}> Forgot Password? </Text>
        </TouchableOpacity>
 
       </View>

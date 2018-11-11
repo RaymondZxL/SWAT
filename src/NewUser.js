@@ -25,17 +25,20 @@ export default class NewUser extends React.Component {
 
     onSubmit(){
     	const reg = /^\w+([\.-]?\w+)*@ucsd.edu$/;
+			const date_regex = /^\d{2}\/\d{2}\/\d{4}$/;
     	if(this.state.email === '' || this.state.name === '' || this.state.birthday === '' || this.state.password === '' || this.state.re_password === ''){
-    		alert('Entries cannot be empty');
-    	}else if(this.state.password != this.state.re_password){
-    		alert('Two passwords do not match');
+    		alert('Entries Cannot Be Empty!');
+    	}else if (this.state.password != this.state.re_password){
+    		alert('Two Passwords Do Not Match!');
     	}else if (reg.test(this.state.email) === false){
-        	alert('ucsd email !!!');
-      	}else{
-      		user.email = this.state.email;
-      		user.name = this.state.name;
-      		user.birthday = this.state.birthday;
-      		user.password = this.state.password;
+        	alert('UCSD Email !!!');
+      }else if (reg.test(this.state.birthday) === false){
+					alert('Invalid Birthday!');
+			}else{
+      	user.email = this.state.email;
+      	user.name = this.state.name;
+    		user.birthday = this.state.birthday;
+    		user.password = this.state.password;
 
     		this.props.navigation.navigate('Login');
     	}
@@ -69,7 +72,7 @@ export default class NewUser extends React.Component {
 		          placeholderTextColor = 'gray'
 		          style={styles.input}
 		        />
-		        <Text style={styles.textBox }>Birthday:</Text>
+		        <Text style={styles.textBox }>Date of Birth:</Text>
 	       		<TextInput
 		          value={this.state.birthday}
 		          keyboardType = 'default'
@@ -103,7 +106,7 @@ export default class NewUser extends React.Component {
 	          style={styles.button1}
 	          onPress={this.onSubmit.bind(this)}
 	       	>
-	         <Text style={styles.titleText}> Submit </Text>
+	         <Text style={styles.submitText}> Submit </Text>
 	       	</TouchableOpacity>
 			</View>
 			</ScrollView>
