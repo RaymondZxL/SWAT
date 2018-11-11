@@ -34,7 +34,7 @@ export default class App extends Component {
     else {
       const reg = /^\w+([\.-]?\w+)*@ucsd.edu$/;
       if (reg.test(this.state.email) === false){
-        alert('ucsd email !!!');
+        alert('UCSD email !!!');
       }else{
         user.email = this.state.email;
         user.password = this.state.password;
