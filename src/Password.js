@@ -12,22 +12,44 @@ export default class Password extends React.Component {
 				email: "",
 				password: "",
 				name: "",
-				interests: [],
-				accountCreationDate: 0
 			}
 		}
 	}
 
 	static navigationOptions = {
-    headerLeft: null,
-    title: 'Resetting Password',
+    title: 'SWAT',
     };
+
+	onSubmit(){
+		const { email } = this.state;
+		const reg = /^\w+([\.-]?\w+)*@ucsd.edu$/;
+		if (reg.test(this.state.email) === false || this.state.email === ''){
+			alert('Enter your UCSD email address');
+		}
+	}
 
 	render(){
 		return(
-			<View style={styles.titlePnl}>
-			<Text style={styles.title}>Password Reset</Text>
+			<KeyboardAvoidingView style={styles.container} behavior="padding">
+			<View style={styles.container}>
+			<Text style={styles.title}> Resetting Password </Text>
+			<TextInput
+			maxLength={40}
+          	value={this.state.email}
+          	keyboardType = 'email-address'
+          	onChangeText={(email) => this.setState({ email })}
+          	placeholder='example@ucsd.edu'
+          	placeholderTextColor = 'gray'
+          	style={styles.input} />
+			
+			<TouchableOpacity
+          	style={styles.button1}
+          	onPress={this.onSubmit.bind(this) }
+        	>
+         	<Text style={styles.buttonText}> Submit </Text>
+       		</TouchableOpacity>
 			</View>
+			</KeyboardAvoidingView>
 		)
 	}
 }
