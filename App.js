@@ -10,8 +10,8 @@ import Password from './src/Password'
 const App = createStackNavigator({
 	Main: {screen: Main},
 	Login:{screen:Login},
-	NewUser: {screen: NewUser },
-	Password: {screen: Password },
+	NewUser: {screen: NewUser},
+	Password: {screen: Password},
 });
 
 export default App;
