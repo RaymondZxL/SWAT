@@ -106,4 +106,8 @@ export default StyleSheet.create({
 	    flex: 1,
 	    justifyContent: 'space-between',
   	},
+
+  	spacer: {
+  		padding: 20,
+  	},
 });
