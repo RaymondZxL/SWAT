@@ -6,23 +6,47 @@ export default class App extends Component {
     constructor(props){
       super(props);
       this.state = {
+        user:{
+          email: '',
+          password: '',
+          name: '',
+          interests: [],
+          birthday: '',
+          re_password: '',
+          accountCreationDate: 0
+        },
         email: '',
         password: '',
       }
     }
     
-  
+    static navigationOptions = {
+    headerLeft: null,
+    title: 'SWAT',
+    };
   
   onLogin() {
     const { email, password } = this.state;
 
-    Alert.alert('Credentials', `email: ${email} + password: ${password}`);
+    if(this.state.email === '' || this.state.password === ''){
+      alert('empty');
+    }
+    else {
+      const reg = /^\w+([\.-]?\w+)*@ucsd.edu$/;
+      if (reg.test(this.state.email) === false){
+        alert('ucsd email !!!');
+      }else{
+        user.email = this.state.email;
+        user.password = this.state.password;
+        this.props.navigation.navigate('Login', {user:this.state.user});
+      }
+    }
   }
 
   render() {
     return (
       <KeyboardAvoidingView style={styles.container} behavior="position">
-      <View style={styles.container}>
+      <View style={styles.container} >
       <Image style={styles.logo} source={require("../assets/IMG_2197.jpg")}/>
       <Text style={styles.textBox}>Email:</Text>
         <TextInput
@@ -30,7 +54,7 @@ export default class App extends Component {
           keyboardType = 'email-address'
           onChangeText={(email) => this.setState({ email })}
           placeholder='example@ucsd.edu'
-          placeholderTextColor = 'black'
+          placeholderTextColor = 'gray'
           style={styles.input}
         />
         <Text style={styles.textBox}>Password:</Text>
@@ -39,16 +63,15 @@ export default class App extends Component {
           onChangeText={(password) => this.setState({ password })}
           placeholder={'example'}
           secureTextEntry={true}
-          placeholderTextColor = 'black'
+          placeholderTextColor = 'gray'
           style={styles.input}
         />
         
-     
+      
         <TouchableOpacity
           style={styles.button1}
-          onPress={() =>
-              {this.props.navigation.navigate('Login')}}
-       >
+          onPress={this.onLogin.bind(this) }
+        >
          <Text style={styles.buttonText}>  Login </Text>
        </TouchableOpacity>
 
@@ -86,13 +109,13 @@ const styles = StyleSheet.create({
   },
   textBox: {
     fontFamily: 'Baskerville',
-    fontSize: 30,
+    fontSize: 20,
     alignItems: 'center',
     justifyContent: 'center',
   },
   titleText:{
-    fontFamily: 'Baskerville',
-    fontSize: 50,
+      fontFamily: 'Baskerville',
+      fontSize: 40,
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -120,7 +143,7 @@ const styles = StyleSheet.create({
   },
   buttonText:{
     fontFamily: 'Baskerville',
-    fontSize: 20,
+    fontSize: 15,
     alignItems: 'center',
     justifyContent: 'center',
   },

@@ -1,5 +1,5 @@
-import React from 'react'; 
-import { StyleSheet, Text, View, Image } from 'react-native';
+import React, { Component } from 'react';
+import { Alert, Button, Text, TouchableOpacity, TextInput, View, StyleSheet, Image, KeyboardAvoidingView } from 'react-native';
 import { createStackNavigator } from 'react-navigation';
 
 import styles from '../src/Styles'
@@ -17,6 +17,11 @@ export default class Password extends React.Component {
 			}
 		}
 	}
+
+	static navigationOptions = {
+    headerLeft: null,
+    title: 'Resetting Password',
+    };
 
 	render(){
 		return(
