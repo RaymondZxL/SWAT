@@ -5,7 +5,7 @@ export default StyleSheet.create({
 		flex: 1,
 		backgroundColor: '#fff',
 		alignItems: 'center',
-		justifyContent: 'flex-start',
+		justifyContent: 'space-evenly',  
 		flexDirection: 'column'
 	},
 
@@ -103,11 +103,11 @@ export default StyleSheet.create({
 	},
 
 	form: {
-	    flex: 1,
-	    justifyContent: 'space-between',
-  	},
+	  flex: 1,
+	  justifyContent: 'space-between',
+  },
 
-  	spacer: {
-  		padding: 20,
-  	},
+  spacer: {
+  	padding: 20,
+  },
 });

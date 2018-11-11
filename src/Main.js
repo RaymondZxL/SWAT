@@ -49,8 +49,8 @@ export default class App extends Component {
     return (
       <KeyboardAvoidingView style={styles.container} behavior="position">
       <View style={styles.container}>
-      <Image style={styles.logo} source={require("../assets/IMG_2197.jpg")}/>
-      <Text style={styles.textBox}>Email:</Text>
+        <Image style={styles.logo} source={require("../assets/IMG_2197.jpg")}/>
+        <Text style={styles.textBox}>Email:</Text>
         <TextInput
           maxLength={40}
           value={this.state.email}
@@ -70,7 +70,6 @@ export default class App extends Component {
           placeholderTextColor = 'gray'
           style={styles.input}
         />
-        
       
         <TouchableOpacity
           style={styles.button1}
@@ -92,12 +91,12 @@ export default class App extends Component {
           onPress={() =>
               {this.props.navigation.navigate('Password')}}
        >
+
          <Text style={styles.buttonText}> Forgot Password </Text>
        </TouchableOpacity>
 
-       <View style={styles.spacing}></View>
-        
       </View>
+
       </KeyboardAvoidingView>
     );
   }
