@@ -20,6 +20,7 @@ export default class NewUser extends React.Component {
 
 	PushToFireBase(event){
 		event.preventDefault();
+		firebase.auth().createUserWithEmailAndPassword(this.state.email, this.state.password).catch(()=>{});
 		this.firebaseRef.child(name).set({
 			email: this.state.email, 
 			name: this.state.name, 
