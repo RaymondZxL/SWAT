@@ -38,8 +38,8 @@ export default class App extends Component {
       if (reg.test(this.state.email) === false){
         alert('UCSD email !!!');
       }else{
-        user.email = this.state.email;
-        user.password = this.state.password;
+        this.state.user.email = this.state.email;
+        this.state.user.password = this.state.password;
         this.props.navigation.navigate('Login', {user:this.state.user});
       }
     }

@@ -16,16 +16,4 @@ const App = createStackNavigator({
 	Password: {screen: Password},
 });
 
-{/*Change to separate firebase.js file if issues occur*/}
-const firebaseConfig = {
-  apiKey: "AIzaSyBN0Va-Agm8vCEH7mBQsb6nhByWfKFx4EA",
-  authDomain: "ios-swat.firebaseapp.com",
-  databaseURL: "https://ios-swat.firebaseio.com",
-  projectId: "ios-swat",
-  storageBucket: "ios-swat.appspot.com",
-  messagingSenderID: "1015403830821"
-};
-firebase.initializeApp(config);
-
-export default firebase;
 export default App;

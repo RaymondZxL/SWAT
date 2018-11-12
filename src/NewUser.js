@@ -64,7 +64,7 @@ export default class NewUser extends React.Component {
 			<ScrollView>
 			<View style={styles.container}>
 			<Text style={styles.title}> Registration </Text>
-			<Image style={styles.avatar} source={require('../assets/Question-mark-face.jpg')}/>
+			<Image style={styles.avatar} source={require('../assets/Gary.jpg')}/>
 			<View style={styles.contaierRow}>
 				<Text style={styles.textBox}>Email:</Text>
 	       		<TextInput
