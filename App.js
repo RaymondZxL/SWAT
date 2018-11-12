@@ -9,18 +9,17 @@ import Main from './src/Main'
 import NewUser from './src/NewUser'
 import Password from './src/Password'
 import Home from './src/Home'
-import MyEvents from './src/MyEvents'
-import CreateEvent from './src/CreateEvent'
-import Profile from './src/Profile'
+//import MyEvents from './src/MyEvents'
+//import CreateEvent from './src/CreateEvent'
+//import Profile from './src/Profile'
 
 let screen = Dimensions.get('window');
 
 const App = createStackNavigator({
 	Main: {screen: Main},
-	Login: {screen:Login},
 	NewUser: {screen: NewUser},
 	Password: {screen: Password},
-  	Home: {screen: Home},
+  Home: {screen: Home},
 });
 
 export default App;
@@ -30,7 +29,7 @@ export const Tabs = createBottomTabNavigator({
 		screen: Home,
 		navigationOptions: {
 			tabBarLabel: 'Home',
-			tabBarIcon: ({ tintColor }) => <Icon name="home" type="antdesign" size={28} color={tintColor} />
+			tabBarIcon: ({ tintColor }) => <Icon name="home" type="entypo" size={28} color={tintColor} />
 		},
 	},
 	/*
@@ -63,9 +62,9 @@ export const createRootNavigator = () => {
 		{
 			Tabs: {
 				screen: Tabs,
-				navigationOptions: {
+				navigationOptions: ({navigation}) => ({
 					gesturesEnabled: false
-				}
+				})
 			}
 		},
 	);
