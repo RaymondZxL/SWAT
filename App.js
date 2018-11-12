@@ -17,6 +17,7 @@ let screen = Dimensions.get('window');
 
 const App = createStackNavigator({
 	Main: {screen: Main},
+	// Login: {screen:Login},
 	NewUser: {screen: NewUser},
 	Password: {screen: Password},
   Home: {screen: Home},

@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import { Alert, Button, Text, TouchableOpacity, TextInput, View, StyleSheet, Image, KeyboardAvoidingView } from 'react-native';
+import { Alert, Button, Text, TouchableOpacity, TextInput, View, StyleSheet, Image, TouchableWithoutFeedback } from 'react-native';
 import { createStackNavigator } from 'react-navigation';
 import firebase from 'firebase'
 import styles from './Styles'
+const dismissKeyboard = require('dismissKeyboard');
 
 export default class App extends Component {
     constructor(props){
@@ -47,7 +48,7 @@ export default class App extends Component {
 
   render() {
     return (
-      <KeyboardAvoidingView style={styles.container} behavior="position">
+      <TouchableWithoutFeedback style={styles.container} behavior="position" onPress={()=>{dismissKeyboard()}}>
       <View style={styles.container}>
         <Image style={styles.logo} source={require("../assets/IMG_2197.jpg")}/>
         <Text style={styles.textBox}>Email:</Text>
@@ -97,7 +98,7 @@ export default class App extends Component {
 
       </View>
 
-      </KeyboardAvoidingView>
+      </TouchableWithoutFeedback>
     );
   }
 }
