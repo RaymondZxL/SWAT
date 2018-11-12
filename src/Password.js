@@ -30,7 +30,7 @@ export default class Password extends React.Component {
 		const { email } = this.state;
 		const reg = /^\w+([\.-]?\w+)*@ucsd.edu$/;
 		if (reg.test(this.state.email) === false || this.state.email === ''){
-			alert('Enter your UCSD email address');
+			alert('Enter Your UCSD Email Address!');
 
 		}
 		this.pushToDatabase();
@@ -49,7 +49,7 @@ export default class Password extends React.Component {
           	placeholder='example@ucsd.edu'
           	placeholderTextColor = 'gray'
           	style={styles.input} />
-			
+
 			<TouchableOpacity
           	style={styles.button1}
           	onPress={this.onSubmit.bind(this) }

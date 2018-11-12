@@ -20,7 +20,7 @@ const App = createStackNavigator({
 	// Login: {screen:Login},
 	NewUser: {screen: NewUser},
 	Password: {screen: Password},
-  Home: {screen: Home},
+	Home: {screen: Home},
 });
 
 export default App;
@@ -35,27 +35,27 @@ export const Tabs = createBottomTabNavigator({
 	},
 	/*
 	'My Events': {
-    screen: MyEvents,
-    navigationOptions: {
-      tabBarLabel: 'My Events',
-      tabBarIcon: ({ tintColor }) => <Icon name="event" type="simplelineicons" size={28} color={tintColor} />
-    },
-  },
-	'Create Event': {
-    screen: CreateEvent,
-    navigationOptions: {
-      tabBarLabel: 'Create Event',
-      tabBarIcon: ({ tintColor }) => <Icon name="pluscircleo" type="antdesign" size={28} color={tintColor} />
-    },
-  },
-	'Profile': {
-    screen: Profile,
-    navigationOptions: {
-      tabBarLabel: 'Profile',
-      tabBarIcon: ({ tintColor }) => <Icon name="ios-person" type="ionicons" size={28} color={tintColor} />
-    },
-  },
-	*/
+	screen: MyEvents,
+	navigationOptions: {
+	tabBarLabel: 'My Events',
+	tabBarIcon: ({ tintColor }) => <Icon name="event" type="simplelineicons" size={28} color={tintColor} />
+},
+},
+'Create Event': {
+screen: CreateEvent,
+navigationOptions: {
+tabBarLabel: 'Create Event',
+tabBarIcon: ({ tintColor }) => <Icon name="pluscircleo" type="antdesign" size={28} color={tintColor} />
+},
+},
+'Profile': {
+screen: Profile,
+navigationOptions: {
+tabBarLabel: 'Profile',
+tabBarIcon: ({ tintColor }) => <Icon name="ios-person" type="ionicons" size={28} color={tintColor} />
+},
+},
+*/
 });
 
 export const createRootNavigator = () => {
