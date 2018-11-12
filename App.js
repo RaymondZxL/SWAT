@@ -22,12 +22,8 @@ const App = createStackNavigator({
 	// Login: {screen:Login},
 	NewUser: {screen: NewUser},
 	Password: {screen: Password},
-<<<<<<< HEAD
-  Password2: {screen: Password2},
-  Home: {screen: Home},
-=======
-	Home: {screen: Home},
->>>>>>> 8e07490592b9d20738b25990326209c04dc9cfc2
+  	Password2: {screen: Password2},
+  	Home: {screen: Home},
 });
 
 export default App;
