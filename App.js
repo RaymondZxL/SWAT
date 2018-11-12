@@ -5,7 +5,6 @@ import { Icon } from 'react-native-elements';
 
 import firebase from './src/firebase'
 
-import Login from './src/Login'
 import Main from './src/Main'
 import NewUser from './src/NewUser'
 import Password from './src/Password'
