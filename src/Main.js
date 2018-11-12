@@ -40,7 +40,7 @@ export default class App extends Component {
       }else{
         user.email = this.state.email;
         user.password = this.state.password;
-        this.props.navigation.navigate('Login', {user:this.state.user});
+        this.props.navigation.navigate('Home', {user:this.state.user});
       }
     }
   }

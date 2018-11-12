@@ -4,15 +4,13 @@ import { createStackNavigator } from 'react-navigation';
 
 import firebase from './src/firebase'
 
-import Login from './src/Login'
+import Home from './src/Home'
 import Main from './src/Main'
 import NewUser from './src/NewUser'
 import Password from './src/Password'
-import Home from './src/Home'
 
 const App = createStackNavigator({
 	Main: {screen: Main},
-	Login:{screen:Login},
 	NewUser: {screen: NewUser},
 	Password: {screen: Password},
   Home: {screen: Home},
