@@ -46,6 +46,7 @@ export const Tabs = createBottomTabNavigator({
 			tabBarIcon: ({ tintColor }) => <Icon name="home" type="antdesign" size={28} color={tintColor} />
 		},
 	},
+	/*
 	'My Events': {
     screen: MyEvents,
     navigationOptions: {
@@ -67,6 +68,7 @@ export const Tabs = createBottomTabNavigator({
       tabBarIcon: ({ tintColor }) => <Icon name="ios-person" type="ionicons" size={28} color={tintColor} />
     },
   },
+	*/
 });
 
 export const createRootNavigator = () => {
