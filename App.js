@@ -9,6 +9,10 @@ import Login from './src/Login'
 import Main from './src/Main'
 import NewUser from './src/NewUser'
 import Password from './src/Password'
+import Home from './src/Home'
+import MyEvents from './src/MyEvents'
+import CreateEvent from './src/CreateEvent'
+import Profile from './src/Profile'
 
 let screen = Dimensions.get('window');
 
@@ -42,14 +46,14 @@ export const Tabs = TabNavigator({
 		},
 	},
 	'My Events': {
-    screen: My_Events,
+    screen: MyEvents,
     navigationOptions: {
       tabBarLabel: 'My Events',
       tabBarIcon: ({ tintColor }) => <Icon name="event" type="simplelineicons" size={28} color={tintColor} />
     },
   },
 	'Create Event': {
-    screen: Create_Event,
+    screen: CreateEvent,
     navigationOptions: {
       tabBarLabel: 'Create Event',
       tabBarIcon: ({ tintColor }) => <Icon name="pluscircleo" type="antdesign" size={28} color={tintColor} />
