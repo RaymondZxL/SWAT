@@ -18,8 +18,8 @@ const App = createStackNavigator({
 	Main: {screen: Main},
 	NewUser: {screen: NewUser},
 	Password: {screen: Password},
-  	Password2: {screen: Password2},
-  	Home: {screen: Home},
+	Password2: {screen: Password2},
+	Home: {screen: Home},
 });
 
 export default App;
@@ -32,7 +32,7 @@ export const Tabs = createBottomTabNavigator({
 			tabBarIcon: ({ tintColor }) => <Icon name="home" type="entypo" size={28} color={tintColor} />
 		},
 	},
-	{/*
+	/*
 	'My Events': {
 	screen: MyEvents,
 	navigationOptions: {
@@ -54,7 +54,7 @@ tabBarLabel: 'Profile',
 tabBarIcon: ({ tintColor }) => <Icon name="ios-person" type="ionicons" size={28} color={tintColor} />
 },
 },
-*/}
+*/
 });
 
 export const createRootNavigator = () => {
