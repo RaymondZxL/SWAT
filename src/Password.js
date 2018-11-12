@@ -29,7 +29,12 @@ export default class Password extends React.Component {
 		var flag = 0;
 		const reg = /^\w+([\.-]?\w+)*@ucsd.edu$/;
 		if (reg.test(this.state.email) === false || this.state.email === ''){
+<<<<<<< HEAD
 			alert('Enter your UCSD email address');
+=======
+			alert('Enter Your UCSD Email Address!');
+
+>>>>>>> 8e07490592b9d20738b25990326209c04dc9cfc2
 		}
 		else {
 			const email = this.state.email;
@@ -61,7 +66,7 @@ export default class Password extends React.Component {
           	placeholder='example@ucsd.edu'
           	placeholderTextColor = 'gray'
           	style={styles.input} />
-			
+
 			<TouchableOpacity
           	style={styles.button1}
           	onPress={this.onSubmit.bind(this) }
