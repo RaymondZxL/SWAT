@@ -10,24 +10,16 @@ import NewUser from './src/NewUser'
 import Password from './src/Password'
 import Password2 from './src/Password2'
 import Home from './src/Home'
-//import MyEvents from './src/MyEvents'
-//import CreateEvent from './src/CreateEvent'
-//import Profile from './src/Profile'
 
 let screen = Dimensions.get('window');
 
 
 const App = createStackNavigator({
 	Main: {screen: Main},
-	// Login: {screen:Login},
 	NewUser: {screen: NewUser},
 	Password: {screen: Password},
-<<<<<<< HEAD
-  Password2: {screen: Password2},
-  Home: {screen: Home},
-=======
-	Home: {screen: Home},
->>>>>>> 8e07490592b9d20738b25990326209c04dc9cfc2
+  	Password2: {screen: Password2},
+  	Home: {screen: Home},
 });
 
 export default App;
@@ -40,7 +32,7 @@ export const Tabs = createBottomTabNavigator({
 			tabBarIcon: ({ tintColor }) => <Icon name="home" type="entypo" size={28} color={tintColor} />
 		},
 	},
-	/*
+	{/*
 	'My Events': {
 	screen: MyEvents,
 	navigationOptions: {
@@ -62,7 +54,7 @@ tabBarLabel: 'Profile',
 tabBarIcon: ({ tintColor }) => <Icon name="ios-person" type="ionicons" size={28} color={tintColor} />
 },
 },
-*/
+*/}
 });
 
 export const createRootNavigator = () => {
