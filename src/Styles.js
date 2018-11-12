@@ -31,12 +31,12 @@ export default StyleSheet.create({
 	},
 
 	logo: {
-		height: 300
+		height: 280
 	},
 
 	avatar: {
-		height: 100,
-		width: 100,
+		height: 110,
+		width: 110,
 	},
 
 	textBox: {

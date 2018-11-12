@@ -70,7 +70,7 @@ export default class NewUser extends React.Component {
 						<View style={styles.contaierRow}>
 						<Text style={styles.textBox}>Email:</Text>
 						<TextInput
-						maxLength={40}
+						maxLength={35}
 						value={this.state.email}
 						keyboardType = 'email-address'
 						onChangeText={(email) => this.setState({ email })}
@@ -80,7 +80,7 @@ export default class NewUser extends React.Component {
 						/>
 						<Text style={styles.textBox}>Name:</Text>
 						<TextInput
-						maxLength={40}
+						maxLength={35}
 						value={this.state.name}
 						keyboardType = 'default'
 						onChangeText={(name) => this.setState({ name })}
@@ -90,7 +90,7 @@ export default class NewUser extends React.Component {
 						/>
 						<Text style={styles.textBox }>Date of Birth:</Text>
 						<TextInput
-						maxLength={40}
+						maxLength={35}
 						value={this.state.birthday}
 						keyboardType = 'default'
 						onChangeText={(birthday) => this.setState({ birthday })}
@@ -100,7 +100,7 @@ export default class NewUser extends React.Component {
 						/>
 						<Text style={styles.textBox}>Password:</Text>
 						<TextInput
-						maxLength={40}
+						maxLength={35}
 						secureTextEntry={true}
 						value={this.state.password}
 						keyboardType = 'default'
@@ -111,7 +111,7 @@ export default class NewUser extends React.Component {
 						/>
 						<Text style={styles.textBox}>Re-enter Password:</Text>
 						<TextInput
-						maxLength={40}
+						maxLength={35}
 						secureTextEntry={true}
 						value={this.state.re_password}
 						keyboardType = 'default'

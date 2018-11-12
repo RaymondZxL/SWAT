@@ -53,7 +53,7 @@ export default class App extends Component {
       <Image style={styles.logo} source={require("../assets/IMG_2197.jpg")}/>
       <Text style={styles.textBox}>Email:</Text>
       <TextInput
-      maxLength={40}
+      maxLength={35}
       value={this.state.email}
       keyboardType = 'email-address'
       onChangeText={(email) => this.setState({ email })}
@@ -63,7 +63,7 @@ export default class App extends Component {
       />
       <Text style={styles.textBox}>Password:</Text>
       <TextInput
-      maxLength={40}
+      maxLength={35}
       value={this.state.password}
       onChangeText={(password) => this.setState({ password })}
       placeholder={'example'}
