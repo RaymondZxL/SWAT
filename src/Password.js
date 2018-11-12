@@ -3,16 +3,15 @@ import { Alert, Button, Text, TouchableOpacity, TextInput, View, StyleSheet, Ima
 import { createStackNavigator } from 'react-navigation';
 
 import styles from '../src/Styles'
+import firebase from '../src/firebase'
 
 export default class Password extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			user: {
-				email: "",
-				password: "",
-				name: "",
-			}
+			email: "",
+			password: "",
+			name: "",
 		}
 	}
 
@@ -20,12 +19,21 @@ export default class Password extends React.Component {
     title: 'SWAT',
     };
 
+    firebaseRef = firebase.database().ref('email');
+
+    pushToDatabase(){
+    	const email = this.state.email;
+    	this.firebaseRef.set({email_add: email});
+    }
+
 	onSubmit(){
 		const { email } = this.state;
 		const reg = /^\w+([\.-]?\w+)*@ucsd.edu$/;
 		if (reg.test(this.state.email) === false || this.state.email === ''){
 			alert('Enter your UCSD email address');
+
 		}
+		this.pushToDatabase();
 	}
 
 	render(){
