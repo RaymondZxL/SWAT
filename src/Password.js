@@ -12,28 +12,40 @@ export default class Password extends React.Component {
 			email: "",
 			password: "",
 			name: "",
+			items:[]
 		}
+
+
 	}
 
 	static navigationOptions = {
     title: 'SWAT',
     };
+	
 
-    firebaseRef = firebase.database().ref('email');
-
-    pushToDatabase(){
-    	const email = this.state.email;
-    	this.firebaseRef.set({email_add: email});
-    }
 
 	onSubmit(){
 		const { email } = this.state;
+		var flag = 0;
 		const reg = /^\w+([\.-]?\w+)*@ucsd.edu$/;
 		if (reg.test(this.state.email) === false || this.state.email === ''){
 			alert('Enter your UCSD email address');
-
 		}
-		this.pushToDatabase();
+		else {
+			const email = this.state.email;
+     		firebase.database()
+      		.ref('User')
+      		.orderByChild("email")
+      		.equalTo(email)
+      		.once("value")
+      		.then(snapshot => {
+        		if (snapshot.val()) {
+            		this.props.navigation.navigate('Password2',{email: this.state.email});
+        		}
+        		else
+				alert('This email is not valid');
+    		})
+		}
 	}
 
 	render(){
