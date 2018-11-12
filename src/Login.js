@@ -4,7 +4,7 @@ import { createStackNavigator } from 'react-navigation';
 
 import styles from '../src/Styles'
 
-export default class Login extends React.Component {
+export default class Login extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {

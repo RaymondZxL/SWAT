@@ -75,7 +75,7 @@ export default class App extends Component {
           style={styles.button1}
           onPress={this.onLogin.bind(this) }
         >
-         <Text style={styles.buttonText}>  Login </Text>
+         <Text style={styles.buttonText}> Login </Text>
        </TouchableOpacity>
 
        <TouchableOpacity
