@@ -18,10 +18,8 @@ export default class NewUser extends React.Component {
 		this.firebaseRef = firebase.database().ref("User");
 	}
 
-	PushToFireBase(event){
-		event.preventDefault();
-		firebase.auth().createUserWithEmailAndPassword(this.state.email, this.state.password).catch(()=>{});
-		this.firebaseRef.child(name).set({
+	PushToFireBase(){
+		this.firebaseRef.child(this.state.name).set({
 			email: this.state.email, 
 			name: this.state.name, 
 			birthday: this.state.birthday, 
@@ -54,7 +52,7 @@ export default class NewUser extends React.Component {
       		user.name = this.state.name;
       		user.birthday = this.state.birthday;
       		user.password = this.state.password;*/}
-      		this.PushToFireBase.bind(this);
+      		this.PushToFireBase();
     		this.props.navigation.navigate('Login');
     	}
 	}
