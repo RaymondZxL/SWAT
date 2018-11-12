@@ -8,6 +8,7 @@ import firebase from './src/firebase'
 import Main from './src/Main'
 import NewUser from './src/NewUser'
 import Password from './src/Password'
+import Password2 from './src/Password2'
 import Home from './src/Home'
 //import MyEvents from './src/MyEvents'
 //import CreateEvent from './src/CreateEvent'
@@ -15,12 +16,14 @@ import Home from './src/Home'
 
 let screen = Dimensions.get('window');
 
+
 const App = createStackNavigator({
 	Main: {screen: Main},
 	// Login: {screen:Login},
 	NewUser: {screen: NewUser},
 	Password: {screen: Password},
-	Home: {screen: Home},
+  	Password2: {screen: Password2},
+  	Home: {screen: Home},
 });
 
 export default App;
