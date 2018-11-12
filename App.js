@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Alert, Button, Text, TouchableOpacity, TextInput, View, StyleSheet, Image, KeyboardAvoidingView, Dimensions, Platform } from 'react-native';
-import { createStackNavigator, StackNavigator, TabNavigator } from 'react-navigation';
+import { createStackNavigator, StackNavigator, createBottomTabNavigator } from 'react-navigation';
 import { Icon } from 'react-native-elements';
 
 import firebase from './src/firebase'
@@ -38,7 +38,7 @@ firebase.initializeApp(config);
 
 export default App;
 
-export const Tabs = TabNavigator({
+export const Tabs = createBottomTabNavigator({
 	'Home': {
 		screen: Home,
 		navigationOptions: {
