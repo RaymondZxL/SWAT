@@ -40,14 +40,14 @@ export default StyleSheet.create({
 	},
 
 	textBox: {
-	  fontFamily: 'normal',
+	  fontFamily: 'Baskerville',
 	  fontSize: 20,
 	  alignItems: 'center',
 	  justifyContent: 'center',
 	},
 
 	titleText:{
-	  fontFamily: 'normal',
+	  fontFamily: 'Baskerville',
 	  fontSize: 20,
 	  alignItems: 'center',
 	  justifyContent: 'center',
@@ -81,7 +81,7 @@ export default StyleSheet.create({
 	},
 
 	buttonText:{
-		fontFamily: 'normal',
+		fontFamily: 'Baskerville',
 		fontSize: 15,
 		fontWeight: 'bold',
 		alignItems: 'center',
@@ -93,7 +93,7 @@ export default StyleSheet.create({
 	},
 
 	submitText:{
-		fontFamily: 'normal',
+		fontFamily: 'Baskerville',
 		fontSize: 20,
 		alignItems: 'center',
 		justifyContent: 'center',
@@ -105,7 +105,7 @@ export default StyleSheet.create({
 
 	input: {
 		width: 300,
-		fontFamily: 'normal',
+		fontFamily: 'Baskerville',
 		fontSize: 20,
 		height: 44,
 		padding: 10,
