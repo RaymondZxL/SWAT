@@ -10,14 +10,11 @@ import Main from './src/Main'
 import NewUser from './src/NewUser'
 import Password from './src/Password'
 import Home from './src/Home'
-<<<<<<< HEAD
 import MyEvents from './src/MyEvents'
 import CreateEvent from './src/CreateEvent'
 import Profile from './src/Profile'
 
 let screen = Dimensions.get('window');
-=======
->>>>>>> 3f731e932bdf89d71cb0cdd6dafb6096797681d4
 
 const App = createStackNavigator({
 	Main: {screen: Main},
