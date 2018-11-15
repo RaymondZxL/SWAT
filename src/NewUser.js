@@ -102,7 +102,7 @@ export default class NewUser extends React.Component {
 						<TextInput
 						maxLength={35}
 						secureTextEntry={true}
-						value={this.state.password}
+						password={this.state.password}
 						keyboardType = 'default'
 						onChangeText={(password) => this.setState({ password })}
 						placeholder='example'
@@ -113,7 +113,7 @@ export default class NewUser extends React.Component {
 						<TextInput
 						maxLength={35}
 						secureTextEntry={true}
-						value={this.state.re_password}
+						re_password={this.state.re_password}
 						keyboardType = 'default'
 						onChangeText={(re_password) => this.setState({ re_password })}
 						placeholder='example'
