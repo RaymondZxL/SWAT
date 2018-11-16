@@ -125,7 +125,7 @@ export default class NewUser extends React.Component {
 						style={styles.button1}
 						onPress={this.onSubmit.bind(this)}
 						>
-						<Text style={styles.submitText}> Submit </Text>
+						<Text style={styles.buttonText}> Submit </Text>
 						</TouchableOpacity>
 						</View>
 						</ScrollView>

@@ -3,6 +3,7 @@ import { Alert, Button, Text, TouchableOpacity, TextInput, View, StyleSheet, Ima
 import { createStackNavigator } from 'react-navigation';
 import firebase from 'firebase'
 import styles from './Styles'
+// import Icon from 'react-native-vector-icons/Ionicons';
 const dismissKeyboard = require('dismissKeyboard');
 
 export default class App extends Component {
@@ -51,26 +52,32 @@ export default class App extends Component {
       <TouchableWithoutFeedback style={styles.container} behavior="position" onPress={()=>{dismissKeyboard()}}>
       <View style={styles.container}>
       <Image style={styles.logo} source={require("../assets/IMG_2197.jpg")}/>
-      <Text style={styles.textBox}>Email:</Text>
-      <TextInput
-      maxLength={35}
-      value={this.state.email}
-      keyboardType = 'email-address'
-      onChangeText={(email) => this.setState({ email })}
-      placeholder='example@ucsd.edu'
-      placeholderTextColor = 'gray'
-      style={styles.input}
-      />
-      <Text style={styles.textBox}>Password:</Text>
-      <TextInput
-      maxLength={35}
-      value={this.state.password}
-      onChangeText={(password) => this.setState({ password })}
-      placeholder={'example'}
-      secureTextEntry={true}
-      placeholderTextColor = 'gray'
-      style={styles.input}
-      />
+      <View style={{flexDirection: 'row', justifyContent:'space-around', alignItems: 'center'}}>
+        {/* add icon for email */}
+        {/* <Icon name={'ios-mail'} size={20} /> */}
+        <TextInput
+        maxLength={35}
+        value={this.state.email}
+        keyboardType = 'email-address'
+        onChangeText={(email) => this.setState({ email })}
+        placeholder='example@ucsd.edu'
+        textAlign='right'
+        placeholderTextColor = 'gray'
+        style={styles.inputMain}
+        />
+      </View>
+      <View style={{flexDirection: 'row', justifyContent: 'space-around', alignItems: 'center'}}>
+        <TextInput
+        maxLength={35}
+        value={this.state.password}
+        onChangeText={(password) => this.setState({ password })}
+        placeholder={'example'}
+        textAlign='right'
+        secureTextEntry={true}
+        placeholderTextColor = 'gray'
+        style={styles.inputMain}
+        />
+      </View>
 
       <TouchableOpacity
       style={styles.button1}
@@ -80,25 +87,23 @@ export default class App extends Component {
       </TouchableOpacity>
 
       <TouchableOpacity
-      style={styles.button1}
-      onPress={() =>
-        {this.props.navigation.navigate('NewUser')}}
+      // style={styles.button1}
+        onPress={() =>
+          {this.props.navigation.navigate('NewUser')}}
         >
         <Text style={styles.buttonText}> New User? </Text>
-        </TouchableOpacity>
+      </TouchableOpacity>
 
-        <TouchableOpacity
-        style={styles.button1}
+      <TouchableOpacity
+        // style={styles.button1}
         onPress={() =>
           {this.props.navigation.navigate('Password')}}
-          >
+      >
+        <Text style={styles.buttonText}> Forgot Password </Text>
+      </TouchableOpacity>
 
-          <Text style={styles.buttonText}> Forgot Password? </Text>
-          </TouchableOpacity>
-
-          </View>
-
-          </TouchableWithoutFeedback>
-        );
-      }
-    }
+    </View>
+    </TouchableWithoutFeedback>
+    );
+  }
+}

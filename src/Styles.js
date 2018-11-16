@@ -5,7 +5,8 @@ export default StyleSheet.create({
 		flex: 1,
 		backgroundColor: '#fff',
 		alignItems: 'center',
-		justifyContent: 'space-evenly',
+		// justifyContent: 'space-evenly',
+		justifyContent: 'center',
 		flexDirection: 'column'
 	},
 
@@ -56,17 +57,18 @@ export default StyleSheet.create({
 
 	button1: {
 		alignItems: 'center',
-		backgroundColor: '#1aa3ff',
+		// backgroundColor: '#1aa3ff',
+		backgroundColor: 'powderblue',
 		width: 300,
 		height: 44,
 		padding: 10,
-		borderWidth: 0,
-		borderColor: 'transparent',
-		borderRadius: 25,
+		borderWidth: 1,
+		borderColor: 'white',
+		borderRadius: 5,
 		marginBottom: 10,
-		shadowOffset:{  width: 5,  height: 5,  },
-		shadowColor: 'black',
-		shadowOpacity: 1.0,
+		// shadowOffset:{  width: 5,  height: 5,  },
+		// shadowColor: 'black',
+		// shadowOpacity: 1.0,
 	},
 
 	button2: {
@@ -83,14 +85,14 @@ export default StyleSheet.create({
 
 	buttonText:{
 		fontFamily: 'Avenir',
-		fontSize: 20,
-		fontWeight: 'bold',
+		fontSize: 15,
+		// fontWeight: 'bold',
 		alignItems: 'center',
 		justifyContent: 'center',
-		color: 'white',
-		textShadowColor: 'rgba(0, 0, 0, 0.75)',
-		textShadowOffset: {width: 1, height: 1},
-		textShadowRadius: 5,
+		// color: 'white',
+		// textShadowColor: 'rgba(0, 0, 0, 0.75)',
+		// textShadowOffset: {width: 1, height: 1},
+		// textShadowRadius: 5,
 	},
 
 	submitText:{
@@ -125,4 +127,11 @@ export default StyleSheet.create({
 	spacer: {
 		padding: 20,
 	},
+
+	inputMain: {
+		   width: 300,
+    fontFamily: 'Baskerville',
+    fontSize: 20,
+    height: 44,
+	}
 });
