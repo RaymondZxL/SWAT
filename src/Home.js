@@ -5,6 +5,7 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import TabNavigator from 'react-native-tab-navigator';
 import styles from './Styles';
 import MainPage from './MainPage';
+import Profile from './Profile';
 
 export default class Home extends Component {
   constructor(props) {
@@ -65,7 +66,7 @@ export default class Home extends Component {
         renderSelectedIcon={()=> <Icon name={'ios-book'} size={22} color={'blue'}/>}
         onPress={()=> this.setState({selectedTab: 'profile'})}
       >
-        <Text>ppp</Text>
+        <Profile/>
       </TabNavigator.Item>
       
     </TabNavigator>
