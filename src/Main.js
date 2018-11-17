@@ -71,7 +71,7 @@ export default class App extends Component {
         maxLength={35}
         value={this.state.password}
         onChangeText={(password) => this.setState({ password })}
-        placeholder={'example'}
+        placeholder={'password'}
         textAlign='right'
         secureTextEntry={true}
         placeholderTextColor = 'gray'
