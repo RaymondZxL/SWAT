@@ -28,8 +28,6 @@ export default StyleSheet.create({
 
 	},
 
-
-
 	nameBday: {
 		flex:2,
 		backgroundColor: '#aaa',
@@ -67,6 +65,7 @@ export default StyleSheet.create({
 	CEtitle: {
 		fontWeight: 'bold',
 		fontSize: 28,
+		marginBottom: 10,
 	},
 
 	logo: {
@@ -74,8 +73,13 @@ export default StyleSheet.create({
 	},
 
 	avatar: {
-		height: 105,
-		width: 105,
+		height: 110,
+		width: 110,
+	},
+
+	uploadAvatar: {
+		height: 110,
+		width: 110,
 	},
 
 	textBox: {
@@ -136,11 +140,11 @@ export default StyleSheet.create({
 	buttonText:{
 		fontFamily: 'Avenir',
 		fontSize: 15,
-		// fontWeight: 'bold',
+		//fontWeight: 'bold',
 		alignItems: 'center',
 		justifyContent: 'center',
 		marginBottom: 10,
-		// color: 'white',
+		//color: 'white',
 		// textShadowColor: 'rgba(0, 0, 0, 0.75)',
 		// textShadowOffset: {width: 1, height: 1},
 		// textShadowRadius: 5,
@@ -174,7 +178,7 @@ export default StyleSheet.create({
 		width: 300,
 		fontFamily: 'Avenir',
 		fontSize: 18,
-		height: 110,
+		height: 120,
 		padding: 10,
 		borderWidth: 1,
 		borderColor: 'grey',

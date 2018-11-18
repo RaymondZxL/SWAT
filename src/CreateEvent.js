@@ -22,8 +22,6 @@ export default class CreateEvent extends Component{
     const date_regex = /^\d{2}\/\d{2}\/\d{4}$/;
     if(this.state.title === '' || this.state.description === '' || this.state.date === '' || this.state.time === '' || this.state.location === ''){
       alert('Entries Cannot Be Empty!');
-    }else if (date_regex.test(this.state.date) === false){
-      alert('Invalid Date!');
     }else{
       /*user.email = this.state.email;
       user.name = this.state.name;
@@ -40,6 +38,7 @@ export default class CreateEvent extends Component{
       <ScrollView>
       <View style={styles.container}>
       <Text style={styles.CEtitle}> New Event </Text>
+      <Text style={styles.textBox}>Upload Image:</Text>
       <Image style={styles.avatar} source={require('../assets/Gary.jpg')}/>
       <View style={styles.contaierRow}>
       <Text style={styles.textBox}>Title:</Text>

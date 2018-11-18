@@ -125,7 +125,7 @@ export default class NewUser extends React.Component {
 						style={styles.button1}
 						onPress={this.onSubmit.bind(this)}
 						>
-						<Text style={styles.buttonText}> SIGNUP </Text>
+						<Text style={styles.submitText}> SIGNUP </Text>
 						</TouchableOpacity>
 						</View>
 						</ScrollView>
