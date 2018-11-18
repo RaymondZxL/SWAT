@@ -1,6 +1,51 @@
 import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
+	containerVertical: {
+		flex: 1,
+		backgroundColor: '#fff',
+		flexDirection: 'column'
+	},
+
+	containerHorizontal: {
+		flex: 1,
+		backgroundColor: '#ccc',
+		flexDirection: 'row'
+	},
+
+	spacing: {
+		flex: 0.1,
+	},
+
+	titleFields: {
+		fontSize: 20,
+	},
+
+	containerBox:{
+		flex: 1,
+		alignItems: 'center',
+		justifyContent: 'center'
+
+	},
+
+
+
+	nameBday: {
+		flex:2,
+		backgroundColor: '#aaa',
+		justifyContent: 'center'
+	},
+
+	emailPW: {
+		flex:.5,
+		backgroundColor: '#bbb'
+	},
+
+	dropDown:{
+		flex:3,
+		backgroundColor: '#ccc'
+	},
+
 	container: {
 		flex: 1,
 		backgroundColor: '#fff',
@@ -8,18 +53,6 @@ export default StyleSheet.create({
 		// justifyContent: 'space-evenly',
 		justifyContent: 'center',
 		flexDirection: 'column'
-	},
-
-	containerRow: {
-		flex: 1,
-		backgroundColor: '#fff',
-		alignItems: 'center',
-		justifyContent: 'center',
-		flexDirection: 'row'
-	},
-
-	spacing: {
-		flex: 0.1,
 	},
 
 	title: {
