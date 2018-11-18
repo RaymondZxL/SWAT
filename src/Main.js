@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Alert, Button, Text, TouchableOpacity, TextInput, View, StyleSheet, Image, TouchableWithoutFeedback } from 'react-native';
+import { Alert, Button, Text, TouchableOpacity, TextInput, View, StyleSheet, Image, TouchableWithoutFeedback, KeyboardAvoidingView } from 'react-native';
 import { createStackNavigator } from 'react-navigation';
 import firebase from 'firebase'
 import styles from './Styles'
@@ -49,6 +49,7 @@ export default class App extends Component {
 
   render() {
     return (
+      <KeyboardAvoidingView style={styles.container} behavior="padding">
       <TouchableWithoutFeedback style={styles.container} behavior="position" onPress={()=>{dismissKeyboard()}}>
       <View style={styles.container}>
       <Image style={styles.logo} source={require("../assets/IMG_2197.jpg")}/>
@@ -71,7 +72,7 @@ export default class App extends Component {
         maxLength={35}
         value={this.state.password}
         onChangeText={(password) => this.setState({ password })}
-        placeholder={'example'}
+        placeholder={'password'}
         textAlign='right'
         secureTextEntry={true}
         placeholderTextColor = 'gray'
@@ -83,7 +84,7 @@ export default class App extends Component {
       style={styles.button1}
       onPress={this.onLogin.bind(this) }
       >
-      <Text style={styles.buttonText}> Login </Text>
+      <Text style={styles.login}> LOGIN </Text>
       </TouchableOpacity>
 
       <TouchableOpacity
@@ -99,11 +100,12 @@ export default class App extends Component {
         onPress={() =>
           {this.props.navigation.navigate('Password')}}
       >
-        <Text style={styles.buttonText}> Forgot Password </Text>
+        <Text style={styles.buttonText}> Forgot Password? </Text>
       </TouchableOpacity>
 
     </View>
     </TouchableWithoutFeedback>
+    </KeyboardAvoidingView>
     );
   }
 }

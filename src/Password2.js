@@ -32,7 +32,7 @@ export default class Login extends Component {
 			onPress={() =>
               {this.props.navigation.navigate('Main')}}
         	>
-         	<Text style={styles.buttonText}> Go to main page </Text>
+         	<Text style={styles.submitText}> Go To Main Page </Text>
        		</TouchableOpacity>
 			</View>
 			</KeyboardAvoidingView>
