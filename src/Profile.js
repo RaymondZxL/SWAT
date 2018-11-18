@@ -16,7 +16,8 @@ export default class Profile extends Component{
   }
 
   render(){
-    var data = [["Games, Food, Movies, Study, Sports"]]
+    var data = [["Games", "Food", "Movies", "Study", "Sports"], 
+    ["Revelle", "Muir", "Marshall", "Warren", "Roosevelt", "Sixth"]];
 
     return(
       <View style={styles.containerVertical}>
@@ -48,7 +49,14 @@ export default class Profile extends Component{
         </View>
 
         <View style={styles.containerBox, styles.dropDown}>
-          
+          <DropDownMenu 
+            style= {{flex: 1}}
+            bgColor={'white'}
+            tintcolor={'#333333'}
+            activityTintColor={'green'}
+            handler={(selection, row) => this.setState({text: data[selection][row]})}
+            data={data}>
+          </DropDownMenu>
         </View>
 
       </View>
