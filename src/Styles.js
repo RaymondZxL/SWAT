@@ -6,21 +6,11 @@ export default StyleSheet.create({
 		backgroundColor: '#fff',
 		flexDirection: 'column'
 	},
-
 	containerHorizontal: {
-		flex: 1,
-		backgroundColor: '#ccc',
+		flex: .1,
+		backgroundColor: '#fff',
 		flexDirection: 'row'
 	},
-
-	spacing: {
-		flex: 0.1,
-	},
-
-	titleFields: {
-		fontSize: 20,
-	},
-
 	containerBox:{
 		flex: 1,
 		alignItems: 'center',
@@ -28,22 +18,30 @@ export default StyleSheet.create({
 
 	},
 
-
-
-	nameBday: {
-		flex:2,
-		backgroundColor: '#aaa',
-		justifyContent: 'center'
+	spacing: {
+		flex: 0.1,
 	},
 
-	emailPW: {
-		flex:.5,
-		backgroundColor: '#bbb'
+
+	fieldTitle: {
+		fontSize: 20,
+		fontWeight: 'bold'
 	},
 
-	dropDown:{
-		flex:3,
-		backgroundColor: '#ccc'
+	inputText: {
+		fontSize: 15,
+	},
+
+	field: {
+		flex: .4
+	},
+
+	inField:{
+		flex: 1
+	},
+
+	interest:{
+		flex:1,
 	},
 
 	container: {
@@ -60,17 +58,14 @@ export default StyleSheet.create({
 		fontSize: 30,
 	},
 
-	titlePnl: {
-		alignItems: 'center'
-	},
 
 	logo: {
 		height: 280
 	},
 
 	avatar: {
-		height: 120,
-		width: 120,
+		height: 150,
+		width: 150,
 	},
 
 	textBox: {
@@ -106,7 +101,7 @@ export default StyleSheet.create({
 
 	button2: {
 		alignItems: 'center',
-		backgroundColor: 'white',
+		backgroundColor: 'powderblue',
 		width: 150,
 		height: 44,
 		padding: 10,

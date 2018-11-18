@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Alert, Button, Text, TouchableOpacity, TextInput, View, StyleSheet, Image, KeyboardAvoidingView, ScrollView } from 'react-native';
 import { createStackNavigator } from 'react-navigation';
-import DropDownMenu from 'react-native-dropdown-menu';
 
 import styles from '../src/Styles'
 import firebase from '../src/firebase'
@@ -16,49 +15,63 @@ export default class Profile extends Component{
   }
 
   render(){
-    var data = [["Games", "Food", "Movies", "Study", "Sports"], 
-    ["Revelle", "Muir", "Marshall", "Warren", "Roosevelt", "Sixth"]];
-
     return(
       <View style={styles.containerVertical}>
 
-        <View style={styles.containerHorizontal}>
-          <View style={styles.containerBox}>
-            <TouchableOpacity onPress={this._onPressButton}>
-              <Image
-                style={styles.avatar}
-                source={require('../assets/Gary.jpg')}
-              />
+        <View style={styles.containerBox}>
+          <Image
+            style={styles.avatar}
+            source={require('../assets/Gary.jpg')}
+          />
+          <TouchableOpacity
+              style={styles.button2}
+              onPress={this.onPressButton}>
+              <Text style={styles.buttonText}> Edit </Text>
             </TouchableOpacity>
+        </View>
+        
+        <View style={styles.containerHorizontal}>
+          <View style={styles.containerBox, styles.field}>
+            <Text style={styles.fieldTitle}> Name: </Text>
           </View>
-
-          <View style={styles.containerBox, styles.nameBday}>
-            <Text style={styles.titleFields}> Name: Gary Gillespie</Text>
-            <Text style={styles.titleFields}> Birthday: December 25 </Text>    
-              <TouchableOpacity
-                style={styles.button2}
-                onPress={this.onPressButton}>
-                <Text style={styles.buttonText}> Edit </Text>
-              </TouchableOpacity>
+          <View style={styles.containerbox, styles.inField}>
+            <Text style={styles.inputText}> Gary Gillespie </Text>
           </View>
         </View>
 
-        <View style={styles.containerBox, styles.emailPW}>
-          <Text style={styles.titleFields}> Email: professionalismpoints@ucsd.edu</Text>
-          <Text style={styles.titleFields}> Password: noWhispering </Text>
+        <View style={styles.containerHorizontal}>
+          <View style={styles.containerBox, styles.field}>
+            <Text style={styles.fieldTitle}> Birthdate: </Text>
+          </View>
+          <View style={styles.containerbox, styles.inField}>
+            <Text style={styles.inputText}> December 25, 1970 </Text>
+          </View>
         </View>
 
-        <View style={styles.containerBox, styles.dropDown}>
-          <DropDownMenu 
-            style= {{flex: 1}}
-            bgColor={'white'}
-            tintcolor={'#333333'}
-            activityTintColor={'green'}
-            handler={(selection, row) => this.setState({text: data[selection][row]})}
-            data={data}>
-          </DropDownMenu>
+        <View style={styles.containerHorizontal}>
+          <View style={styles.containerBox, styles.field}>
+            <Text style={styles.fieldTitle}> Email: </Text>
+          </View>
+          <View style={styles.containerbox, styles.inField}>
+            <Text style={styles.inputText}> gg@ucsd.edu </Text>
+          </View>
         </View>
 
+        <View style={styles.containerHorizontal}>
+          <View style={styles.containerBox, styles.field}>
+            <Text style={styles.fieldTitle}> College: </Text>
+          </View>
+          <View style={styles.containerbox, styles.inField}>
+            <Text style={styles.inputText}> Gillespie </Text>
+          </View>
+        </View>        
+
+        <View style={styles.spacing}></View>
+
+        <View style={styles.containerBox, styles.interest}>
+          <Text style={styles.fieldTitle}> Interests: </Text>
+          <Text style={styles.inputText}> Food, Socials, 21+, Study, Movies </Text>
+        </View>
       </View>
     )
   }  
